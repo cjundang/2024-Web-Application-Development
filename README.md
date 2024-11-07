@@ -26,10 +26,8 @@ Here’s a more detailed lecture plan with subtopics, exercises, and practical p
   - Practice handling HTTP responses and parsing JSON data.
   - Create a mini API server (e.g., in Node.js) to handle GET/POST requests and return data.
 
-**Week 3: HTML5**
-To expand these notes into a more comprehensive lecture outline for your course on HTML5 within mobile programming, here’s a detailed breakdown:
 
----
+## Week 3: HTML5
 
 ### 1. **Introduction to HTML5**
    - **Historical Context**: Briefly review the evolution from HTML 4.01 to HTML5, touching on XHTML and limitations that led to HTML5's development.
