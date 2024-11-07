@@ -4,7 +4,7 @@ Here’s a more detailed lecture plan with subtopics, exercises, and practical p
 
 ---
 
-### Weeks 1-6: Basic Concepts
+## Weeks 1-6: Basic Concepts
 
 **Week 1: Introduction to Web Architecture**
 - **Subtopics:**
@@ -27,14 +27,89 @@ Here’s a more detailed lecture plan with subtopics, exercises, and practical p
   - Create a mini API server (e.g., in Node.js) to handle GET/POST requests and return data.
 
 **Week 3: HTML5**
-- **Subtopics:**
-  - HTML5 document structure and essential elements
-  - Semantic tags (e.g., `<header>`, `<section>`, `<footer>`) and their role in SEO
-  - Embedding multimedia (audio, video) and forms in HTML5
-- **Programming Exercises:**
-  - Build a basic HTML5 webpage that includes text, images, lists, and forms.
-  - Add semantic HTML tags to structure the content meaningfully.
-  - Embed a video or audio element and create a simple contact form.
+To expand these notes into a more comprehensive lecture outline for your course on HTML5 within mobile programming, here’s a detailed breakdown:
+
+---
+
+### 1. **Introduction to HTML5**
+   - **Historical Context**: Briefly review the evolution from HTML 4.01 to HTML5, touching on XHTML and limitations that led to HTML5's development.
+   - **HTML5 Development Organizations**: Explain the role of W3C and WHATWG in creating a unified standard to improve web accessibility, media support, and functionality for modern web apps.
+   - **Mobile and Cross-Platform Relevance**: Discuss how HTML5 was designed with cross-platform support in mind, particularly for mobile devices, to enhance content consistency across devices.
+
+### 2. **Key Features of HTML5**
+   - **Semantic Elements**:
+     - **Examples**: `<header>`, `<footer>`, `<article>`, `<section>`, and `<aside>`.
+     - **Purpose**: Explain how these elements improve content organization and accessibility, allowing search engines and assistive technologies to interpret content more accurately.
+     - **Practice Exercise**: Structure a basic web page using these elements.
+   
+   - **Forms 2.0**:
+     - **New Input Types**: Go over new input types (e.g., `<email>`, `<tel>`, `<date>`, `<range>`), form validation features, and input attributes (e.g., `placeholder`, `required`).
+     - **Exercise**: Build a form with these new types and attributes, highlighting validation and mobile form accessibility.
+   
+   - **Persistent Local Storage**:
+     - **Overview**: Introduce `localStorage` and `sessionStorage`, explaining their differences and use cases in mobile apps.
+     - **Example**: Demonstrate a basic example of saving form data locally, which persists even after closing the browser.
+   
+   - **WebSocket and SSE**:
+     - **WebSocket**: Explain its role in real-time bidirectional data transfer, commonly used in messaging apps and live updates.
+     - **Server-Sent Events (SSE)**: Discuss how SSE enables one-way communication from the server to the client, suitable for notifications or news feeds.
+     - **Hands-On**: Set up a basic WebSocket and SSE demo using JavaScript.
+
+   - **Canvas**:
+     - **2D Drawing**: Overview of the `<canvas>` element, focusing on drawing shapes, adding images, and animations.
+     - **Use in Games and Graphical Apps**: Briefly explain its use cases in simple games and visualizations, commonly used in mobile applications.
+     - **Practical Example**: Create simple shapes and animations using JavaScript in a `<canvas>` element.
+
+   - **Audio & Video Elements**:
+     - **Embedding Without Plugins**: Explain how `<audio>` and `<video>` allow for native media embedding, supporting formats like MP3, MP4, and WebM.
+     - **Attributes and Controls**: Review attributes such as `controls`, `autoplay`, `loop`, and `preload`.
+     - **Practice**: Embed an audio file and a video with controls and discuss mobile compatibility.
+
+   - **Geolocation**:
+     - **Location-Based Services**: Explain how Geolocation APIs enable mobile applications to request and display users' locations, essential for services like maps and nearby searches.
+     - **Permissions and Privacy**: Discuss privacy concerns and the importance of obtaining user permission.
+     - **Hands-On**: Create a sample page that retrieves and displays the user’s current location.
+
+   - **Microdata and Schema.org**:
+     - **Custom Vocabularies**: Explain how microdata allows custom tagging beyond HTML5, enabling improved SEO and richer search engine results.
+     - **Example**: Structure content for a business listing using Schema.org vocabulary for microdata.
+
+   - **Drag and Drop**:
+     - **Enhanced Interactivity**: Explain the significance of the drag-and-drop API for mobile touch interactions.
+     - **Example**: Demonstrate a simple task of dragging an element and dropping it into another section within the same page.
+
+### 3. **HTML Document Structure**
+   - **Document Outline**: Review the recommended HTML5 document structure, emphasizing `<html>`, `<head>`, `<body>`, and the `<!DOCTYPE html>` declaration.
+   - **HTML5 Tags and Their Uses**:
+     - Go over essential tags (`<title>`, `<meta>`, `<link>`, `<script>`).
+     - Example: Walk through creating a complete HTML5 document with semantic structure.
+
+### 4. **HTML5 Best Practices**
+   - **Lowercase Elements and Attributes**: Emphasize the importance of consistency and readability.
+   - **Quoted Attribute Values**: Explain why quotes are important and provide examples.
+   - **End Tags for Clarity**: Although some tags are self-closing, clarify how explicit closing tags can improve code readability.
+   - **Code Formatting**:
+     - Use indentation and line breaks for readability.
+     - Exercise: Format a messy HTML5 file to practice beautification and consistency.
+
+### 5. **HTML5 Resources and Further Study**
+   - **Primary References**:
+     - Direct students to resources such as W3Schools, MDN Web Docs, and tutorialspoint.
+   - **Cheatsheets and Tools**:
+     - Mention HTML5 cheat sheets and debugging tools such as the Chrome Developer Tools.
+   - **Project-Based Learning**:
+     - Encourage students to start a small project, such as a basic web page that incorporates several HTML5 features.
+
+### 6. **Class Exercises and Projects**
+   - **Mini-Projects**:
+     - Create a webpage for a local business using semantic elements and forms.
+     - Develop a small app with local storage to keep a record of a task list.
+   - **Real-World Application**:
+     - Discuss how each HTML5 feature contributes to modern web app development, especially on mobile platforms.
+
+### 7. **Summary and Q&A**
+   - Review the key concepts and encourage questions to clarify any doubts.
+   - Optional Quiz: A short quiz to reinforce learning and review main points from the session.
 
 **Week 4: CSS3**
 - **Subtopics:**
