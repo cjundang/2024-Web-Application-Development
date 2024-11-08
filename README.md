@@ -2,6 +2,7 @@
 
 Here’s a more detailed lecture plan with subtopics, exercises, and practical programming tasks for each week:
 
+{{html5.md}}
 ---
 
 ## Weeks 1-6: Basic Concepts
