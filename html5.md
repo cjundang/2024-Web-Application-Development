@@ -211,10 +211,11 @@
 
 ---
 ### 3. **HTML Document Structure**
-   - **Document Outline**: Review the recommended HTML5 document structure, emphasizing `<html>`, `<head>`, `<body>`, and the `<!DOCTYPE html>` declaration.
-   - **HTML5 Tags and Their Uses**:
-     - Go over essential tags (`<title>`, `<meta>`, `<link>`, `<script>`).
-     - Example: Walk through creating a complete HTML5 document with semantic structure.
+- **Document Outline**: 
+    - Review the recommended HTML5 document structure, emphasizing `<html>`, `<head>`, `<body>`, and the `<!DOCTYPE html>` declaration.
+- **HTML5 Tags and Their Uses**:
+    - Go over essential tags (`<title>`, `<meta>`, `<link>`, `<script>`).
+    - Example: Walk through creating a complete HTML5 document with semantic structure.
 
 
 **1. `<!DOCTYPE html>` Declaration**
@@ -232,7 +233,7 @@
 **4. `<body>` Element**
 - The `<body>` element contains the content of the HTML document, including text, images, links, forms, and other elements that are displayed on the webpage.
 
-### **Essential HTML5 Tags and Their Uses**
+#### **Essential HTML5 Tags and Their Uses**
 
 Here are some key tags commonly found in the `<head>` and `<body>` sections of an HTML5 document:
 
@@ -274,7 +275,7 @@ Here are some key tags commonly found in the `<head>` and `<body>` sections of a
      </style>
      ```
 
-## **Example: A Complete HTML5 Document**
+#### **Example: A Complete HTML5 Document**
 
 Below is a complete HTML5 document that incorporates semantic structure and essential tags:
 
@@ -336,7 +337,7 @@ Below is a complete HTML5 document that incorporates semantic structure and esse
 </html>
 ```
 
-### **Explanation of the Example:**
+#### **Explanation of the Example:**
 1. **`<!DOCTYPE html>`**: Declares the document type as HTML5.
 2. **`<html lang="en">`**: Sets the language attribute to English.
 3. **`<head>`**: Includes metadata such as character encoding, viewport settings, description, and links to external resources.
