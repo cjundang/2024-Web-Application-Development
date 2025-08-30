@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Post and Owner</title>
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .card {
+            width: 60%;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        .card h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .card p {
+            color: #555;
+        }
+        .card .owner {
+            font-size: 14px;
+            color: #777;
+            margin-top: 10px;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Fetch Post and Owner</h1>
+    <div class="container">
+        <input type="text" id="postId" placeholder="Enter Post ID">
+        <button onclick="fetchPostAndOwner()">Fetch Post</button>
+    </div>
+    <div id="card-container"></div>
+
+    <script>
+        // Function to fetch a single post and its owner's name
+        async function fetchPostAndOwner() {
+            const postId = document.getElementById('postId').value.trim();
+            if (!postId) {
+                alert('Please enter a valid Post ID.');
+                return;
+            }
+
+            try {
+                // Fetch the post
+                const postResponse = await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`);
+                if (!postResponse.ok) {
+                    throw new Error('Post not found.');
+                }
+                const post = await postResponse.json();
+
+                // Fetch the owner (user) details
+                const userResponse = await fetch(`https://jsonplaceholder.typicode.com/users/${post.userId}`);
+                if (!userResponse.ok) {
+                    throw new Error('User not found.');
+                }
+                const user = await userResponse.json();
+
+                // Display the post and owner in a card
+                const cardContainer = document.getElementById('card-container');
+                cardContainer.innerHTML = `
+                    <div class="card">
+                        <h2>${post.title}</h2>
+                        <p>${post.body}</p>
+                        <div class="owner">Posted by: <strong>${user.name}</strong></div>
+                    </div>
+                `;
+            } catch (error) {
+                const cardContainer = document.getElementById('card-container');
+                cardContainer.innerHTML = `<p style="color: red;">${error.message}</p>`;
+                console.error('Error fetching post and owner:', error);
+            }
+        }
+    </script>
+</body>
+</html>

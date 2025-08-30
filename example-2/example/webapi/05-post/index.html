@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory CRUD App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container my-5">
+    <h1 class="text-center mb-4">Inventory Management</h1>
+    
+    <!-- Add/Update Item Form -->
+    <form id="item-form" class="mb-4">
+      <div class="row g-3">
+        <div class="col-md-3">
+          <input type="text" id="itemName" class="form-control" placeholder="Item Name" required>
+        </div>
+        <div class="col-md-3">
+          <input type="text" id="category" class="form-control" placeholder="Category" required>
+        </div>
+        <div class="col-md-2">
+          <input type="number" id="quantity" class="form-control" placeholder="Quantity" required>
+        </div>
+        <div class="col-md-2">
+          <input type="number" step="0.01" id="price" class="form-control" placeholder="Price" required>
+        </div>
+        <div class="col-md-2">
+          <button type="submit" class="btn btn-primary w-100">Save</button>
+        </div>
+      </div>
+    </form>
+
+    <!-- Item Table -->
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Item Name</th>
+          <th>Category</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="item-table-body">
+        <!-- Dynamic Rows -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    const API_URL = 'http://localhost:3000/items';
+    let editingItemId = null; // Tracks the ID of the item being edited
+
+    // Fetch and display items
+    async function fetchItems() {
+      const response = await axios.get(API_URL);
+      const items = response.data;
+      const tableBody = document.getElementById('item-table-body');
+      tableBody.innerHTML = '';
+      items.forEach(item => {
+        const row = `
+          <tr>
+            <td>${item.id}</td>
+            <td>${item.itemName}</td>
+            <td>${item.category}</td>
+            <td>${item.quantity}</td>
+            <td>${item.price.toFixed(2)}</td>
+            <td>
+              <button class="btn btn-warning btn-sm" onclick="editItem(${item.id})">Edit</button>
+              <button class="btn btn-danger btn-sm" onclick="deleteItem(${item.id})">Delete</button>
+            </td>
+          </tr>
+        `;
+        tableBody.insertAdjacentHTML('beforeend', row);
+      });
+    }
+
+    // Handle form submission for Add or Update
+    document.getElementById('item-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const itemName = document.getElementById('itemName').value;
+      const category = document.getElementById('category').value;
+      const quantity = parseInt(document.getElementById('quantity').value, 10);
+      const price = parseFloat(document.getElementById('price').value);
+
+      if (editingItemId) {
+        // Update existing item
+        await axios.put(`${API_URL}/${editingItemId}`, {
+          itemName,
+          category,
+          quantity,
+          price,
+          dateAdded: new Date().toISOString()
+        });
+        editingItemId = null; // Clear editing mode
+      } else {
+        // Add new item
+        await axios.post(API_URL, {
+          itemName,
+          category,
+          quantity,
+          price,
+          dateAdded: new Date().toISOString()
+        });
+      }
+
+      e.target.reset();
+      fetchItems();
+    });
+
+    // Delete item
+    async function deleteItem(id) {
+      await axios.delete(`${API_URL}/${id}`);
+      fetchItems();
+    }
+
+    // Edit item
+    async function editItem(id) {
+      const item = (await axios.get(`${API_URL}/${id}`)).data;
+      document.getElementById('itemName').value = item.itemName;
+      document.getElementById('category').value = item.category;
+      document.getElementById('quantity').value = item.quantity;
+      document.getElementById('price').value = item.price;
+
+      editingItemId = id; // Set the ID of the item being edited
+    }
+
+    // Initial fetch
+    fetchItems();
+  </script>
+</body>
+</html>

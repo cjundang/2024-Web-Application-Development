@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage Example</title>
+</head>
+<body>
+    <h1>Task List</h1>
+    <input type="text" id="taskInput" placeholder="Enter a task">
+    <button onclick="addTask()">Add Task</button>
+    <ul id="taskList"></ul>
+
+    <script>
+        const taskList = document.getElementById('taskList');
+        const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+        function displayTasks() {
+            taskList.innerHTML = tasks.map(task => `<li>${task}</li>`).join('');
+        }
+
+        function addTask() {
+            const taskInput = document.getElementById('taskInput');
+            tasks.push(taskInput.value);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+            taskInput.value = '';
+            displayTasks();
+        }
+
+        displayTasks();
+    </script>
+</body>
+</html>

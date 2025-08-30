@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single Page Web</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 20px;
+      text-align: center;
+    }
+    #hero {
+      background-color: #007bff;
+      color: white;
+      padding: 50px 20px;
+    }
+    #hero a {
+      color: #007bff;
+      background-color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    #hero a:hover {
+      background-color: #e2e6ea;
+    }
+    .card-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .card {
+      border: 1px solid #ddd;
+      padding: 20px;
+      width: 300px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 5px;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div>Single Page Web</div>
+    <div>
+      <a href="#hero">Home</a>
+      <a href="#features">Features</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <h1>Welcome to the Showcase</h1>
+    <p>Building responsive and modern web designs effortlessly.</p>
+    <a href="#features">Explore Features</a>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features">
+    <h2>Features</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Responsive Design</h3>
+        <p>Easily adapt your website to any device.</p>
+      </div>
+      <div class="card">
+        <h3>Utility Classes</h3>
+        <p>Simplify styling with reusable classes.</p>
+      </div>
+      <div class="card">
+        <h3>Modern Components</h3>
+        <p>Use pre-designed components for faster development.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/350" alt="Placeholder Image">
+      <img src="https://via.placeholder.com/350" alt="Placeholder Image">
+      <img src="https://via.placeholder.com/350" alt="Placeholder Image">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>&copy; 2024 Single Page Web. All Rights Reserved.</p>
+    <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>
+  </footer>
+</body>
+</html>

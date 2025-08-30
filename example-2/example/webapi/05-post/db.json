@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "itemName": "Laptop",
+      "category": "Electronics",
+      "quantity": 10,
+      "price": 1200,
+      "dateAdded": "2024-12-01T10:30:00Z",
+      "id": 1
+    },
+    {
+      "itemName": "Desk Chair",
+      "category": "Furniture",
+      "quantity": 23,
+      "price": 85.5,
+      "dateAdded": "2024-12-10T06:48:40.253Z",
+      "id": 2
+    }
+  ]
+}
