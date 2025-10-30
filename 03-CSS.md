@@ -5,7 +5,7 @@ size: 16:9
 paginate: true
 title: สร้างเว็บ Static แสดงข้อมูลทั่วไปด้วย HTML+CSS
 description: xxx
-backgroundImage: url('wallpaper-1.jpg')
+backgroundImage: url('wallpaper.001.jpeg')
 backgroundSize: cover
 footer: "INF67-175 Web Development | บทที่ 3: สร้างเว็บ Static แสดงข้อมูลทั่วไปด้วย HTML+CSS"
 
@@ -36,7 +36,8 @@ style: |
 # 🎨 บทที่ 3  
 ## สร้างเว็บ Static ด้วย HTML + CSS
 
-**รายวิชา:** INF67-175 Web Development
+**รายวิชา** IIT67-272: Web Application Development
+
 **เป้าหมาย:** ทำให้เว็บไซต์สวยงามด้วยการใช้ CSS  
 
 ---

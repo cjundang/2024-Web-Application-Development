@@ -5,7 +5,7 @@ size: 16:9
 paginate: true
 title: สร้างเว็บ Static ด้วย Bootstrap
 description: xxx
-backgroundImage: url('wallpaper-1.jpg')
+backgroundImage: url('wallpaper.001.jpeg')
 backgroundSize: cover
 footer: "INF67-175 Web Development | บทที่ 4: สร้างเว็บ Static ด้วย Bootstrap"
 style: |
@@ -32,10 +32,11 @@ style: |
 
 ---
 
-# 🧱 บทที่ 3  
+# 🧱 บทที่ 4  
 ## สร้างเว็บ Static ด้วย Bootstrap
 
-**รายวิชา:** INF67-175 Web Development
+**รายวิชา** IIT67-272: Web Application Development
+
 **เป้าหมาย:** จัด Layout และทำเว็บให้ responsive อย่างรวดเร็ว
 
 ---
